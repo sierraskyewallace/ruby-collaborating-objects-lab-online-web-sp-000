@@ -8,6 +8,9 @@ class Song
   def self.all 
     @@all
   end
+  def artist=(artist)
+    @artist = artist
+  end
   def artist_name=(name)
     self.artist = artist
     self.artist = Artist.find_or_create_by_name(name)
