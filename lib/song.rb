@@ -5,10 +5,7 @@ class Song
     @name = name
   end 
   def self.all 
-    @@all 
-  end
-  def save 
-    @@all << self 
+    @@all << self
   end
   def artist_name=(name)
     self.artist = artist
