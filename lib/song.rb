@@ -7,9 +7,6 @@ class Song
   def self.all 
     @@all
   end
-  def save 
-    @@all << self 
-  end
   def self.new_by_filename(file)
     song = self.new
     song.name = filename.split(" - ")[1]
