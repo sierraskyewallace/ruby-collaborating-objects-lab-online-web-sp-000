@@ -13,10 +13,11 @@ class Artist
     self.songs << song
   end
   def self.find_or_create_by_name(name)
-    if self.find(name)
-      name
+    artist = @@all.find{|artist| artist.name == name}
+    if artist
+      artist
     else
-      self.new(name)
+      Artist.new(name)
     end
   end
 end
