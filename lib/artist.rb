@@ -12,7 +12,7 @@ class Artist
   def add_song(song)
     self.songs << song
   end
-  def find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)
     artist_found = self.all.find {|artist| artist.name == artist}
     if artist_found
       artist_found
