@@ -13,7 +13,7 @@ class Artist
     self.songs << song
   end
   def self.find_or_create_by_name(name)
-    if self.detect(name)
+    if self.find(name)
       name
     else
       self.new(name)
