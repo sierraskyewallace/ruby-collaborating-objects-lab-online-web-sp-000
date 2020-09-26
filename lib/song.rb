@@ -6,8 +6,8 @@ class Song
     @@all << self
   end 
   def artist_name=(name)
-    artist = Artist.find_or_create_by_name(name)
-    self.artist = artist
+    artist_name = Artist.find_or_create_by_name(name)
+    self.artist_name = artist
     artist.add_song(self)
   end
   def self.all 
